@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Cart - Restaurantes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            flex: 2;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .restaurants-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .restaurant {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            padding: 10px;
+            position: relative;
+        }
+
+        .restaurant img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .restaurant-details {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .restaurant-details h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .restaurant-details p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .restaurant:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .restaurant-button {
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         background-color: #333;
+         color: #fff;
+         border: none;
+         padding: 10px 20px;
+         border-radius: 5px;
+         font-size: 1em;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+         cursor: pointer;
+}
+
+    .restaurant:hover .restaurant-button {
+    opacity: 1;
+}
+
+
+        footer {
+            padding: 40px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: block;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 768px) {
+            .restaurants-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Price Cart</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu();">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="bares.html">Bares</a></li>
+                <li><a href="hoteles.html">Hoteles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="restaurants-container">
+        <a href="https://7cielos.com.co/" class="restaurant">
+            <img src="IMG/restaurante 1.png" alt="Restaurante 1">
+            <div class="restaurant-details">
+                <h2>7 Cielos Rooftop</h2>
+                <p>7 Cielos Rooftop en Cartagena es un bar y restaurante con vistas espectaculares de la ciudad. Ofrece un ambiente vibrante con buena música y cócteles, perfecto para una salida nocturna.</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+
+        <a href="https://restaurantecande.com/" class="restaurant">
+            <img src="IMG/restaurante 2.png" alt="Restaurante 2">
+            <div class="restaurant-details">
+                <h2>Restaurante Candé</h2>
+                <p>Restaurante Candé en Cartagena celebra la cocina tradicional colombiana. Con un ambiente acogedor y platos auténticos, es ideal para disfrutar de la cultura local.</p>
+                <div class="stars">★★★★½</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+
+        <a href="https://www.sophiahotel.com.co/urania-rooftop/" class="restaurant">
+            <img src="IMG/restaurante 3.png" alt="Restaurante 3">
+            <div class="restaurant-details">
+                <h2>Rooftop Urania By Sophia Hotel</h2>
+                <p>Rooftop Urania en el Sophia Hotel, Cartagena, ofrece vistas impresionantes de la ciudad. Es un lugar elegante para disfrutar de cócteles y un ambiente relajado.</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+
+        <a href="https://mardelasantillas.co/" class="restaurant">
+            <img src="IMG/restaurante 4.png" alt="Restaurante 4">
+            <div class="restaurant-details">
+                <h2>Mar de las Antillas</h2>
+                <p>Mar de las Antillas es un restaurante en Cartagena, conocido por su enfoque en la cocina caribeña. Ofrece platos frescos con sabores auténticos, en un ambiente acogedor y tropical.</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+
+        <a href="https://www.mareacartagena.com/" class="restaurant">
+            <img src="IMG/restaurante 5.png" alt="Restaurante 5">
+            <div class="restaurant-details">
+                <h2>Restaurante Marea</h2>
+                <p>Marea es un elegante restaurante en Cartagena, ubicado junto al mar. Ofrece una experiencia gastronómica sofisticada con un enfoque en mariscos frescos y cocina de autor.</p>
+                <div class="stars">★★★★½</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+
+        <a href="https://www.hyatt.com/hyatt-regency/es-ES/ctgrc-hyatt-regency-cartagena/dining" class="restaurant">
+            <img src="IMG/restaurante 6.png" alt="Restaurante 6">
+            <div class="restaurant-details">
+                <h2>Amacagua Lounge & Grill</h2>
+                <p>Amacagua Salón y Parrilla en Cartagena, ubicado en el Hotel Hyatt Regency, ofrece cocina gourmet y parrilla en un ambiente moderno con vistas al mar.</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <button class="restaurant-button">Visitar</button>
+        </a>
+    </section>
+
+    <footer>
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; text-align: center;">
+            <div style="flex: 1; min-width: 250px;">
+                <img src="IMG/logo 1.png" alt="Logo de Price Cart" class="footer-logo" width="200" style="margin-bottom: 20px;">
+                <p><strong>Teléfono:</strong> +57 3184730361</p>
+            </div>
+            
+            <div style="flex: 2; min-width: 300px; margin: 10px;">
+                <h3 style="margin-bottom: 20px;"><strong>Misión</strong></h3>
+                <p style="margin: 0 20px;">Nuestra misión es brindar la mejor experiencia turística a nuestros clientes, 
+                    ofreciendo servicios de calidad, soluciones innovadoras y un soporte inigualable que aseguren un viaje
+                     inolvidable en cada destino</p>
+            </div>
+    
+            <div style="flex: 2; min-width: 300px; margin: 10px;">
+                <h3 style="margin-bottom: 20px;"><strong>Visión</strong></h3>
+                <p style="margin: 0 20px;">Nuestra visión es ser la principal plataforma de turismo en la región,
+                    reconocida por nuestra excelencia, compromiso con la sostenibilidad y capacidad para conectar
+                     a las personas con experiencias únicas y memorables en todo el mundo.</p>
+            </div>
+        </div>
+    
+        <div style="text-align: center; margin-top: 30px;">
+            <p>&copy; 2024 Price Cart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
