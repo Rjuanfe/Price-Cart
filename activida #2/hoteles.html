@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Cart - Hoteles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            flex: 2;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 25%;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+            color: #333;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin-top: 15px;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .card .link-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; 
+        }
+
+        .card:hover .link-button {
+            display: block; 
+        }
+
+        footer {
+            padding: 40px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Price Cart</h1>
+        </div>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="restaurante.html">Restaurante</a></li>
+                <li><a href="bares.html">Bares</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <a href="https://www.booking.com/hotel/co/caribe.es.html?aid=356980&label=gog235jc-1FCAsoMkIGY2FyaWJlSApYA2gyiAEBmAEKuAEXyAEM2AEB6AEB-AECiAIBqAIDuALy3Jm2BsACAdICJGEyNmZkNzM4LWRjZjYtNDRjOS1hZWRlLWIzZGZiNmJmMjlhN9gCBeACAQ&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=25252228_348275728_2_1_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=25252228_348275728_2_1_0;hpos=1;matching_block_id=25252228_348275728_2_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=25252228_348275728_2_1_0__15750;srepoch=1724280442;srpvid=7493a03a9d000037;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 1.png" alt="Hotel 1">
+            <h3>Hotel Caribe by Faranda Grand, a member of Radisson Individuals</h3>
+            <p>El Hotel Caribe by Faranda Grand en Cartagena, Colombia, es un icónico 
+                hotel que combina encanto colonial con modernas comodidades. Ofrece vistas 
+                al mar Caribe, acceso a la playa y hermosos jardines tropicales.</p>
+                <button class="link-button">IVisitar</button>
+        </a>
+        <a href="https://www.booking.com/hotel/co/charleston-santa-teresa.es.html?aid=356980&label=gog235jc-1FCAsoMkIXY2hhcmxlc3Rvbi1zYW50YS10ZXJlc2FIClgDaDKIAQGYAQq4ARfIAQzYAQHoAQH4AQKIAgGoAgO4ArXfmbYGwAIB0gIkNDk0MmQyMmMtYmY2MC00MjI5LThhOTYtNjllZjhkMTg2OTM02AIF4AIB&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=41057709_89172095_2_2_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=41057709_89172095_2_2_0;hpos=1;matching_block_id=41057709_89172095_2_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=41057709_89172095_2_2_0__138308510;srepoch=1724280767;srpvid=5abaa0dbfb9004d8;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 2.png" alt="Hotel 2">
+            <h3>Charleston Santa Teresa Cartagena</h3>
+            <p>El Charleston Santa Teresa, un lujoso hotel en el corazón de Cartagena,
+                 Colombia, ocupa un antiguo convento colonial. Combina elegancia con vistas 
+                 al mar y la ciudad amurallada, ofreciendo modernas comodidades y un servicio excepcional.</p>
+                 <button class="link-button">Visitar</button>
+        </a>
+        <a href="https://www.booking.com/hotel/co/casona-del-porvenir.es.html?aid=356980&label=gog235jc-1FCAsoMkITY2Fzb25hLWRlbC1wb3J2ZW5pckgKWANoMogBAZgBCrgBF8gBDNgBAegBAfgBAogCAagCA7gC19-ZtgbAAgHSAiRlM2U3ZDRjMi0wNWU2LTRhNDktYTc5OS0xMmIxM2MwMGZiN2bYAgXgAgE&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=854158401_352859716_2_1_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=854158401_352859716_2_1_0;hpos=1;matching_block_id=854158401_352859716_2_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=854158401_352859716_2_1_0__83700000;srepoch=1724280793;srpvid=0ef9a0ecc88c0243;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 3.png" alt="Hotel 3">
+            <h3>Hotel Casona del Porvenir</h3>
+            <p>El Hotel Casona del Porvenir en Sevilla, España, es un encantador hotel
+                 boutique que combina diseño andaluz tradicional con toques modernos. 
+                 Ofrece una experiencia exclusiva en un ambiente tranquilo y sofisticado, 
+                 con habitaciones elegantemente decoradas y un servicio personalizado.</p>
+                 <button class="link-button">Visitar</button>
+        </a>
+    </section>
+
+    <section class="container">
+        <a href="https://www.booking.com/hotel/co/cartagena-de-indias-small-luxury.es.html?aid=356980&label=gog235jc-1FCAsoMkIgY2FydGFnZW5hLWRlLWluZGlhcy1zbWFsbC1sdXh1cnlIClgDaDKIAQGYAQq4ARfIAQzYAQHoAQH4AQKIAgGoAgO4Av3fmbYGwAIB0gIkNTE3NzA0MzMtMWQ4NC00MTliLWJhMzItMDRiYWY0MjQ2ZDE42AIF4AIB&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=25976502_82918417_0_1_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=25976502_82918417_0_1_0;hpos=1;matching_block_id=25976502_82918417_0_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=25976502_82918417_0_1_0__129999900;srepoch=1724280831;srpvid=1894a0ffa52b00b1;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 4.png" alt="Hotel 4">
+            <h3>Hotel Movich Cartagena De Indias</h3>
+            <p>El Hotel Movich Cartagena De Indias es una joya ubicada en el centro histórico de Cartagena,
+                ofreciendo una vista panorámica desde su terraza, que incluye la icónica Torre del Reloj y
+                el mar Caribe.</p>
+                <button class="link-button">Visitar</button>
+        </a>
+        <a href="https://www.booking.com/hotel/co/sofitel-santa-clara.es.html?aid=356980&label=gog235jc-1FCAsoMkITc29maXRlbC1zYW50YS1jbGFyYUgKWANoMogBAZgBCrgBF8gBDNgBAegBAfgBAogCAagCA7gCmuCZtgbAAgHSAiQ4ZTY1ZGNmYy01NjI5LTRmOWYtOWYyOS0wNWEzM2FlMTM3YWHYAgXgAgE&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=25233515_238432160_2_1_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=25233515_238432160_2_1_0;hpos=1;matching_block_id=25233515_238432160_2_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=25233515_238432160_2_1_0__64000;srepoch=1724280864;srpvid=427da10d3c8903e2;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 5.png" alt="Hotel 5">
+            <h3>Sofitel Legend Santa Clara Cartagena</h3>
+            <p>El Sofitel Legend Santa Clara, un convento restaurado del siglo XVII, combina la arquitectura
+                histórica con el lujo moderno, ubicado en la ciudad amurallada de Cartagena.</p>
+                <button class="link-button">Visitar</button>
+        </a>
+        <a href="https://www.booking.com/hotel/co/casa-san-agustin.es.html?aid=356980&label=gog235jc-1FCAsoMkIQY2FzYS1zYW4tYWd1c3RpbkgKWANoMogBAZgBCrgBF8gBDNgBAegBAfgBAogCAagCA7gCvuCZtgbAAgHSAiRhMmIwZWExNC1kZmY5LTRjYWYtOTE3OS1hMzUyMDEzZDhiZGLYAgXgAgE&sid=06a0d75070b520fb74e35863916ab70e&age=0;all_sr_blocks=38809802_89170210_2_1_0;checkin=2024-08-28;checkout=2024-08-29;dest_id=-579943;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=38809802_89170210_2_1_0;hpos=1;matching_block_id=38809802_89170210_2_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=38809802_89170210_2_1_0__233540000;srepoch=1724280897;srpvid=ca03a12061cd0217;type=total;ucfs=1&" class="card">
+            <img src="IMG/hotel 6.png" alt="Hotel 6">
+            <h3>Hotel Casa San Agustin</h3>
+            <p>El Hotel Casa San Agustin es una mezcla exquisita de tres casas coloniales, meticulosamente
+                restauradas, situado en el corazón del centro histórico de Cartagena.</p>
+                <button class="link-button">Visitar</button>
+        </a>
+    </section>
+
+    <footer>
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; text-align: center;">
+            <div style="flex: 1; min-width: 250px;">
+                <img src="IMG/logo 1.png" alt="Logo de Price Cart" class="footer-logo" width="200" style="margin-bottom: 20px;">
+                <p><strong>Teléfono:</strong> +57 3184730361</p>
+            </div>
+            
+            <div style="flex: 2; min-width: 300px; margin: 10px;">
+                <h3 style="margin-bottom: 20px;"><strong>Misión</strong></h3>
+                <p style="margin: 0 20px;">Nuestra misión es brindar la mejor experiencia turística a nuestros clientes, ofreciendo servicios de calidad, soluciones innovadoras y un soporte inigualable que aseguren un viaje inolvidable en cada destino.</p>
+            </div>
+    
+            <div style="flex: 2; min-width: 300px; margin: 10px;">
+                <h3 style="margin-bottom: 20px;"><strong>Visión</strong></h3>
+                <p style="margin: 0 20px;">Nuestra visión es ser la principal plataforma de turismo en la región, reconocida por nuestra excelencia, compromiso con la sostenibilidad y capacidad para conectar a las personas con experiencias únicas y memorables en todo el mundo.</p>
+            </div>
+        </div>
+    
+        <div style="text-align: center; margin-top: 30px;">
+            <p>&copy; 2024 Price Cart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
